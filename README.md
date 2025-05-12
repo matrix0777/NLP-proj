@@ -7,3 +7,5 @@
 python3 -m venv NLP-proj
 source NLP-proj/bin/activate
 ```
+``bash 
+pip install -r requirements.txt
