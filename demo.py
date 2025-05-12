@@ -2,10 +2,7 @@ from hate.logger import logging
 from hate.exception import CustomException
 import sys
 
-""" logging.info("This is an info message") """
+from hate.configuration.gcloud_syncer import GCloudSync
 
-try:
-    a = 1 / '0'
-except Exception as e:
-    raise CustomException(e, sys) from e
-    logging.error("Error occurred while dividing by zero: %s", e)
+obj = GCloudSync()
+obj.sync_folder_from_gcloud("nlp-proj2025", "dataset.zip", "downlode/dataset.zip")
